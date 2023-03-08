@@ -1,6 +1,6 @@
 .menuIcon{
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   display: none;
   cursor: pointer;
 }
@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 .brand::first-letter{
-  color: #fd5b1c;
+  color: #2EE59D;
 }
 .container{
  position: sticky;
@@ -23,6 +23,7 @@
 .navBar{
   display: flex;
   align-items: center;
+  max-width: 70%;
   justify-content: space-between;
   margin: auto;
 }
@@ -33,35 +34,84 @@
 }
 .navigation > ul > li{
   padding: 13px 18px;
+  white-space: nowrap;
   cursor: pointer;
   font-weight: 700;
 }
-.navigation > ul > li:nth-child(6){
-  background-color: #42b5d3;
-  border-radius: 10px;
-  white-space: nowrap;
-  color: white;
+.downloadCV{
   font-weight: bold;
-}
-.navigation > ul > li:nth-child(6):hover{
-  background-color: white;
-  color: rgb(109, 26, 43);
-  transition: .3s ease-in-out;
-  transition-delay: 0.3s ease;
+  border: none;
+  letter-spacing: 1.5px;
+  background-color: #2EE59D;
+  outline: none;
+  color: white;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
   cursor: pointer;
-  transform: translateY(-3px);
+  padding: 13px 18px;
+  outline: none;
+  border-radius: 5px;
+
+}
+.downloadCV:hover{
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
-.navigation > ul > li > a:hover{
-  border-bottom: 3px solid #fd5b1c;
-  color: #fd5b1c;  
-}
 
-.navigation > ul > li > a:focus{
-  border-bottom: 3px solid #fd5b1c;
-  color: #fd5b1c;  
+.mobileNavigation{
+  transform: translateX(-110vw);
+  transform: all 1s ease;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  background-color: #fd5b1c;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition:all .26s ease-in-out;
+  -moz-transition:all .26s ease-in-out;
+  -ms-transition:all .26s ease-in-out;
+  -o-transition:all .26s ease-in-out;
+  transition:all .26s ease-in-out;
+  animation: testAnimation 1s linear;
 }
-
+.arrowUp{
+  width: 30px;
+  height: 30px;
+}
+.arrow_container{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  background-color: #2EE59D;
+  outline: none;
+  color: white;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+}
+.arrow_container:hover{
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+@keyframes testAnimation {
+from{
+  transform: translateX(-110vw);
+}
+to{
+  transform: translateX(0vw);
+}
+}
 .navigation > ul > li > a:active{
   border-bottom: 3px solid #fd5b1c;
   color: #fd5b1c;  
@@ -73,5 +123,12 @@
   }
   .menuIcon{
     display: block;
+  }
+  .mobileNavigation{
+  transform: translateX(0);
+  transition: all 1s ease;
+  }
+  .navBar{
+    max-width: 100%;
   }
 }

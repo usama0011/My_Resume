@@ -1,4 +1,6 @@
+import { ArrowUpIcon } from "@heroicons/react/24/outline"
 import Head from "next/head"
+import { useEffect, useState } from "react"
 import About from "../components/About"
 import Banner from "../components/Banner"
 import Certifications from "../components/Certifications"
@@ -9,7 +11,8 @@ import Testimonials from "../components/Testimonials"
 import WatchVedio from "../components/WatchVedio"
 import styles from '../styles/HomePage.module.css'
 const HomePage = () => {
-  return (
+  
+return (
     <>
      <Head>
         <title>Personal Portfolio Website</title>
@@ -28,6 +31,7 @@ const HomePage = () => {
        <Certifications/>
        </section>
        <Contact/>
+     
     </>
   )
 }

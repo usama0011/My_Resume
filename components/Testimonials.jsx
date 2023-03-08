@@ -8,19 +8,19 @@ const Testimonials = () => {
   const clientsREviewList =[{
     review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, eum exercitationem neque iusto aliquam consequatur, quibusdam doloremque ea dicta quisquam atque necessitatibus vero commodi voluptates? Vitae repellendus voluptates architecto placeat!",
     reviewerImage:"https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
-    reviewerName:"Usama Ahmad",
+    reviewerName:"Abdul Moiz",
     reviewerProfession:"Developer"
 
   },{
     review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, eum exercitationem neque iusto aliquam consequatur, quibusdam doloremque ea dicta quisquam atque necessitatibus vero commodi voluptates? Vitae repellendus voluptates architecto placeat!",
     reviewerImage:"https://images.unsplash.com/photo-1563237023-b1e970526dcb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
-    reviewerName:"Haris Ahmad",
+    reviewerName:"Haider Ali",
     reviewerProfession:"UI/UX Developer"
 
   },{
     review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, eum exercitationem neque iusto aliquam consequatur, quibusdam doloremque ea dicta quisquam atque necessitatibus vero commodi voluptates? Vitae repellendus voluptates architecto placeat!",
     reviewerImage:"https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
-    reviewerName:"Haider Ali",
+    reviewerName:"Muhammad Saim",
     reviewerProfession:"Back End Developer"
   }]
   function resetTimeout() {
@@ -59,7 +59,7 @@ const Testimonials = () => {
         })}
           <div className={styles.slideshowDots}>
         {clientsREviewList.map((_, idx) => (
-          <div style={index === idx ? {backgroundColor:"#fd5b1c"}:{backgroundColor:"#c4c4c4"}} onClick={()=>setIndex(idx)} key={idx} className={styles.slideshowDot}></div>
+          <div style={index === idx ? {backgroundColor:"#2EE59D"}:{backgroundColor:"#c4c4c4"}} onClick={()=>setIndex(idx)} key={idx} className={styles.slideshowDot}></div>
         ))}
       </div>
       </div>

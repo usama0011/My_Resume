@@ -14,7 +14,7 @@
   flex-wrap:wrap;
 }
 .contact_left{
-  background-color: #5cce93;
+  background-color: #2EE59D;
   flex: 0.4;
   color: white;
   padding: 30px;
@@ -28,7 +28,8 @@
   padding: 15px 0px;
 }
 .contact_left > h2{
-  padding: 20px 0px;
+  padding: 0px 0px;
+  margin-bottom: 10px;
   font-size: 30px;
 }
 .contact_left > p{
@@ -78,17 +79,23 @@ font-size: 16px;
   margin-right: 10px;
 }
 .sendButton{
-  width:fit-content;
-  background-color: #5cce93;
-  color: white;
-  border:none;
-  margin: 50px 0px;
-  padding:15px 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  outline: none;
+  font-weight: bold;
+    border: none;
+    padding: 18px 50px;
+    background-color: #2EE59D;
+    outline: none;
+    color: white;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+.sendButton:hover{
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 .text_area {
   width: 100%;
@@ -101,9 +108,11 @@ font-size: 16px;
 outline: none;
 resize: none;
 }
+.sendButton:disabled{
+  background-color: #668176;
+}
 @media screen and  (max-width:785px) {
  .contact_left{
-
   flex: 1;
  } 
  .contact_right{

@@ -7,4 +7,41 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 50px 0px;
+}
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-row-gap: 20px;
+    border-radius: 5px;
+    grid-column-gap: 20px;
+}
+.Portfolio_singleImage{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+@media screen and (min-width:667px) { 
+    .Portfolio_singleImage{
+       width: 350px;
+       height: 300px;
+       object-fit: cover;
+    } 
+   }
+
+@media screen and (max-width:1000px) {
+ .container{
+    margin: 10px 5px;
+    max-width: 90%;
+    margin: auto;
+ } 
+ .Portfolio_singleImage{
+    
+ }
 }

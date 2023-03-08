@@ -1,0 +1,76 @@
+.container{
+    max-width: 70%;
+    margin: auto;
+    padding: 30px;
+}
+
+.product_UpperContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 30px;
+}
+.technologyContainer > h2{
+padding-bottom: 30px;
+}
+.imageContainer > h2{
+padding-bottom: 30px;
+}
+.singleImage{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+.product_BottomContainer > h3{
+    margin-bottom: 20px;
+}
+
+.product_BottomContainer{
+    margin-top: 30px;
+}
+.product_BottomContainer > p{
+    line-height: 30px;
+    font-size: 15px;
+}
+.buttons_Container{
+    margin: 50px 0px;
+}
+.buttons_Container > button{
+    padding: 20px 30px;
+    margin-right: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 2.5px;
+    border-radius: 5px;
+
+}
+.buttons_Container > button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+@media screen and (max-width:1070px) {
+   .container{
+    max-width: 100%;
+   } 
+   .singleImage{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+   }
+}
+
+@media screen and (max-width:514px) {
+    .buttons_Container > button{
+        margin-top: 30px;
+    }
+ }
+ 

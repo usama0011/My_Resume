@@ -1,0 +1,12 @@
+.Container{
+ display: flex;
+ margin-bottom: 20px;
+
+}
+.technologyLogo{
+    margin-right: 30px;
+}
+.brandName > h3{
+    font-size: 18px;
+    color: #312929;
+}

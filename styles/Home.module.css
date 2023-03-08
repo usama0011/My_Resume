@@ -2,24 +2,8 @@
   padding: 0;
   width: 100%;
   position: relative;
-  border: 1px solid red;
 }
 
-
-.arrowUp{
-  width: 30px;
-  height: 30px;
-}
-.arrow_container{
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #fd5b1c;
-}
 
 @media screen and (max-width:667px) {
  .arrowUp{

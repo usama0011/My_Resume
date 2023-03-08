@@ -76,7 +76,7 @@ const Certifications = () => {
     <p className={styles.header}>CERTIFICATION</p>
     <div className={styles.navigation_buttons}>
       <div className={styles.heading}>
-        <h2>Certification Achievement</h2>
+      <h2>Certification Achievement</h2>
       </div>
       <div className={styles.nav_buttons}>
         <ul>
@@ -159,7 +159,7 @@ const Certifications = () => {
               return(
                 <> <div className={styles.image_Container}>
                 <a href={item.certificatieLink} target="blank">
-               <Image className={styles.single_image} src={item.certificateImage} key={i} width={350} height={300} alt="userProjectImage"/>  
+               <Image className={styles.single_image} src={item.certificateImage} key={i} width={350} height={250} alt="userProjectImage"/>  
                <div className={styles.subTitle}>
                 <span>{item.certificateName}</span>
                 <span>{item.certificateInstitute}</span>
@@ -172,7 +172,7 @@ const Certifications = () => {
           </div> : null}
         </div>
         <div className={styles.explore}>
-          <Link className={styles.exploreLink} href="/Certificates">Explore More</Link>
+          <Link className={styles.exploreLink} href="/certificates">Explore More</Link>
         </div>
     </div>
   )

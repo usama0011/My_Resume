@@ -2,9 +2,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
     margin-bottom: 50px;
+    overflow: hidden;
     background-color:#f7f7f7;
-    padding: 100px 30px;
-    
+    padding: 100px 30px;   
 }
 .admin{
     border-radius: 50%;
@@ -12,20 +12,74 @@
 .AboutMy{
     padding: 20px;
     display: grid;
+    max-width: 70%;
+    margin: auto;
     place-self: center;
+    animation: mainamimation 3s linear;
+}
+@keyframes mainamimation {
+    from{
+        transform: translateX(-100vw);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.rank{
+    margin-top: 30px;
+}
+.rank > span:first-child{
+    font-weight: bold;
+    font-size: 22px;
+    color:#2EE59D;
+    margin-right: 20px;
+}
+
+.userName{
+    color: #2EE59D;
+}
+.rank > span:last-child{
+    font-size: 16px;
+    letter-spacing: 2px;
+    color:black;
+}
+.admin{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 .AboutMy > p{
     line-height: 30px;
-    
     color: rgb(109, 101, 101);
+    letter-spacing: 1px;
     margin-top: 20px;
 }
 .largeImageContainer{
     display: grid;
     place-self: center;
+    animation: containerRight 4s linear;
+}
+@keyframes containerRight {
+    from{
+        transform: translatey(-100vh);
+    }
+    to{
+        transform: translatey(0);
+    }   
 }
 @media screen and  (max-width:743px) {
  .container{
     padding: 30px 30px;
  }   
+ .AboutMy > h1{
+    font-size: 25px;
+    line-height: 40px;
+ }
 }
+
+@media screen and  (max-width:1337px) {
+    .AboutMy{
+        max-width: 100%;
+    }
+   }
+   

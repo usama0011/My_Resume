@@ -27,13 +27,15 @@ const CreativePortfolio = () => {
             {AllListItems.map((item,i)=>{
               return(
                 <>
-              <div className={styles.image_Container}>
+                <Link href={`creativeportfolio/${item.id}`}>
+              <div key={item.id} className={styles.image_Container}>
                <Image className={styles.single_image} src={item.image} key={i} width={350} height={200} alt="userProjectImage"/>  
                <div className={styles.subTitle}>
                 <span>{item.projectName}</span>
                 <span>{item.technologyStack}</span>
                </div>
               </div>
+                </Link>
                 </>
               )
             })}
@@ -42,13 +44,16 @@ const CreativePortfolio = () => {
             {AllListItems.filter((item)=>item.technologyStack === 'Node JS').map((item,i)=>{
               return(
                 <>
-              <div className={styles.image_Container}>
+                 <Link href={`creativeportfolio/${item.id}`}>
+
+              <div key={item.id} className={styles.image_Container}>
                <Image className={styles.single_image} src={item.image} key={i} width={350} height={200} alt="userProjectImage"/>  
                <div className={styles.subTitle}>
                 <span>{item.projectName}</span>
                 <span>{item.technologyStack}</span>
                </div>
               </div>
+                 </Link>
                 </>
               )
             })}
@@ -57,13 +62,16 @@ const CreativePortfolio = () => {
             {AllListItems.filter((item)=>item.technologyStack === 'Redux').map((item,i)=>{
               return(
                 <>
-                <div className={styles.image_Container}>
+                 <Link href={`creativeportfolio/${item.id}`}>
+
+                <div key={item.id} className={styles.image_Container}>
                  <Image className={styles.single_image} src={item.image} key={i} width={350} height={200} alt="userProjectImage"/>  
                  <div className={styles.subTitle}>
                   <span>{item.projectName}</span>
                   <span>{item.technologyStack}</span>
                  </div>
                 </div>
+            </Link>
                   </>
               )
             })}
@@ -72,23 +80,27 @@ const CreativePortfolio = () => {
             {AllListItems.filter((item)=>item.technologyStack === 'HTML,CSS,JS').map((item,i)=>{
               return(
                 <>
-              <div className={styles.image_Container}>
+                 <Link href={`creativeportfolio/${item.id}`}>
+
+              <div key={item.id} className={styles.image_Container}>
                <Image className={styles.single_image} src={item.image} key={i} width={350} height={200} alt="userProjectImage"/>  
                <div className={styles.subTitle}>
                 <span>{item.projectName}</span>
                 <span>{item.technologyStack}</span>
                </div>
               </div>
+                 </Link>
                 </>
               )
             })}
           </div> : null}
         </div>
         <div className={styles.explore}>
-          <Link className={styles.exploreLink} href="/Portfolio">Explore More</Link>
+          <Link className={styles.exploreLink} href="/creativeportfolio">Explore More</Link>
         </div>
     </div>
   )
 }
 
 export default CreativePortfolio
+

@@ -1,6 +1,39 @@
 import styles from '../styles/Contact.module.css'
 import { MapPinIcon,PhoneIcon,EnvelopeIcon,GlobeAltIcon ,LinkIcon} from '@heroicons/react/24/outline'
+import { useState } from 'react'
 const Contact = () => {
+  const initialState={
+    name:"",
+    email:"",
+    subject:"",
+    message:""
+  }
+  const [formData,setFormData]=useState(initialState)
+  const [diplayMessage,setDisplayMessage]=useState(false);
+  let myMessageBox = `<div>Messaage Send Success...</div>`
+   const handleChange=({target})=>{
+    setFormData((prev)=>({...prev,[target.name]:target.value}))
+   }
+   const handleFormSubmitControl= async (daata)=>{
+   await fetch("/api/contact",{
+    method:"POST",
+    body:JSON.stringify(daata),
+    headers:{
+      "Content-Type":'application/json',
+      "Accept":"application/json"
+    }
+   }) 
+   }
+   const handleSubmit=(e)=>{
+    e.preventDefault();
+    handleFormSubmitControl(formData)
+    setFormData(initialState);
+    console.log("Form Submit")
+    let successFullMessage= setInterval(()=>{
+       setDisplayMessage(true)
+    },2000)
+    clearInterval(successFullMessage)
+   }
   return (
     <div className={styles.container}>
     <div className={styles.contact_Container}>
@@ -31,30 +64,31 @@ const Contact = () => {
       <div className={styles.contact_right}>
         <h2>Send a Message</h2>
         <div className={styles.form_container}>
-          <form action="">
+          <form action="" onChange={handleChange}>
             <div className={styles.first_box}>
               <div className={styles.item}>
                 <label htmlFor="name">FULL NAME</label>
-                <input className={styles.specila} type="text" placeholder='Name' />
+                <input id='input' required onChange={handleChange} name='name' value={formData.fullname}  className={styles.specila} type="text" placeholder='Name' />
               </div>
               <div className={styles.item}>
                 <label htmlFor="name">EMAIL</label>
-                <input type="email" placeholder='Email' />
+                <input required onChange={handleChange} name='email' value={formData.email}  type="email" placeholder='Email' />
               </div>
             </div>
             <div className={styles.item}>
                 <label htmlFor="subject">SUBJECT</label>
-                <input type="text" placeholder='Subject' />
+                <input required onChange={handleChange} name='subject' value={formData.subject}  type="text" placeholder='Subject' />
               </div>
               <div className={styles.item}>
                 <label htmlFor="messaage">Message</label>
-                <textarea className={styles.text_area} placeholder="Message" name="message" id="message" cols="30" rows="15"></textarea>
+                <textarea required onChange={handleChange}  value={formData.message}  className={styles.text_area} placeholder="Message" name='message' id="message" cols="30" rows="15"></textarea>
               </div>
-             <button className={styles.sendButton} type='submit'>Send Message</button>
+             <button disabled={!formData.email || !formData.message || !formData.name || !formData.message} className={styles.sendButton} onClick={handleSubmit}>Send Message</button>
           </form>
         </div>
       </div>
     </div>
+    {diplayMessage && <div>Message Send Successfully!!!</div>}
     </div>
   )
 }

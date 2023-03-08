@@ -42,7 +42,7 @@ const LatestNews = () => {
       </div>
     </div>
     <div className={styles.explore}>
-          <Link className={styles.exploreLink} href="/Posts">Explore More</Link>
+          <Link className={styles.exploreLink} href="/latestnews">Explore More</Link>
         </div>
     </div>
   )
