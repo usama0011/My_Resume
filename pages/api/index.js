@@ -13,7 +13,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('Connected to MongoDB!');
 });
-app.use('localhost:3000/api/creativeportfolio', portfolioRoter);
+app.use('', portfolioRoter);
 let port = 3000;
 app.listen(port,()=>{
   console.log("Server is ruuning sucessfully on" + port);

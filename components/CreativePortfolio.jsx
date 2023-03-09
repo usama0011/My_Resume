@@ -28,7 +28,7 @@ const CreativePortfolio = () => {
               return(
                 <>
                 <Link href={`creativeportfolio/${item.id}`}>
-              <div key={item.id} className={styles.image_Container}>
+              <div key={i} className={styles.image_Container}>
                <Image className={styles.single_image} src={item.image} key={i} width={350} height={200} alt="userProjectImage"/>  
                <div className={styles.subTitle}>
                 <span>{item.projectName}</span>
