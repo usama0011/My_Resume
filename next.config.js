@@ -1,28 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    remotePatterns: [
+  images:{
+    remotePatterns:[
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        port: "443",
-        pathname: "/photo-**",
+        protocol:'https',
+        hostname:"images.unsplash.com",
+        port:"",
+        pathname:"/photo-**"
       },
       {
-        protocol: "https",
-        hostname: "logos-download.com",
-        port: "443",
-        pathname: "/wp-content/uploads/**",
+        protocol:'https',
+        hostname:"logos-download.com",
+        port:"",
+        pathname:"/wp-content/uploads/**"
       },
       {
-        protocol: "https",
-        hostname: "seeklogo.com",
-        port: "443",
-        pathname: "/images/**",
-      },
+        protocol:'https',
+        hostname:"seeklogo.com",
+        port:"",
+        pathname:"/images/**"
+      }
     ],
-  },
-};
+   
+  }
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
