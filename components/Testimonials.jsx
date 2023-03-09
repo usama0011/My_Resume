@@ -28,11 +28,18 @@ const Testimonials = () => {
       clearTimeout(timeoutRef.current);
     }
   }
-  useEffect(()=>{
-    resetTimeout()
-    timeoutRef.current= setTimeout(()=>setIndex((prev)=>prev === clientsREviewList.length-1 ? 0 : prev+1),delay)
-   return ()=>{resetTimeout()}
-  },[index])
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(() =>
+      setIndex((prev) =>
+        prev === clientsREviewList.length - 1 ? 0 : prev + 1
+      ),
+      delay
+    );
+    return () => {
+      resetTimeout();
+    };
+  }, [index, clientsREviewList.length]);
   return (
     <div className={styles.mainContainer}>
     <div className={styles.container}>

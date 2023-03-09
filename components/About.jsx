@@ -29,7 +29,7 @@ const About = () => {
      <div className={styles.introContainer}>
       <p className={styles.aboutMeHead}>ABOUT ME</p>
       <h1 className={styles.heading}>Creative Independent Web Developer based in USA</h1>
-      <p className={styles.description}>I'm web designer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
+      <p className={styles.description}>I am web designer, and I am very passionate and dedicated to my work. With 20 years experience as a professional web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
       <button className={styles.dv} disabled={downloading} onClick={handleDownloadCV}>{downloading ? "Download..." : "Download CV"}</button>
      </div>
     </div>
